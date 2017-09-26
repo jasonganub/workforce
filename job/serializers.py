@@ -1,5 +1,5 @@
 from rest_framework import routers, serializers, viewsets
-from job.models import Job
+from .models import Job
 
 
 # Serializers define the API representation.
