@@ -6,7 +6,7 @@ from .models import Job
 class JobSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Job
-        fields= ('title', 'location', 'description')
+        fields = ('title', 'location', 'description')
 
 # ViewSets define the view behavior.
 class JobViewSet(viewsets.ModelViewSet):
