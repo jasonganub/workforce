@@ -39,3 +39,11 @@ def create_job(request):
         serializer.save()
         return JsonResponse(serializer.data, status=201)
     return JsonResponse(serializer.errors, status=400)
+
+
+@csrf_exempt
+def job_summary(request, job_id):
+    """
+    Returns a Json response of information pertaining to that specific job.
+    """
+    pass
