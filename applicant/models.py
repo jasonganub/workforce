@@ -1,4 +1,5 @@
 from django.db import models
+from job.models import Job
 
 
 class Applicant(models.Model):
@@ -15,7 +16,7 @@ class Applicant(models.Model):
         (STARTED, 'Started'),
     )
     job = models.ForeignKey(
-        'job.Job',
+        Job,
         on_delete=models.CASCADE,
     )
     first_name = models.CharField(max_length=50)

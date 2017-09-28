@@ -1,4 +1,5 @@
 from django.db import models
+from applicant.models import Applicant
 
 
 class Experience(models.Model):
@@ -10,7 +11,7 @@ class Experience(models.Model):
     )
 
     applicant = models.ForeignKey(
-        'applicant.Applicant',
+        Applicant,
         on_delete=models.CASCADE,
     )
     category = models.CharField(
