@@ -26,3 +26,6 @@ class Applicant(models.Model):
         max_length=3,
         choices=STATUS_CHOICES,
     )
+
+    def __str__(self):
+        return "{} {}".format(first_name, last_name)
